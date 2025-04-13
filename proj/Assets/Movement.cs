@@ -17,6 +17,7 @@ public class movement : MonoBehaviour
     void Update()
     {
         moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        print(Time.deltaTime);
     }
 
     void FixedUpdate()
@@ -24,7 +25,7 @@ public class movement : MonoBehaviour
         
         Vector3 directionAndSpeed = new Vector3(moveInput.x, 0 , moveInput.y) * moveSpeed;
         directionAndSpeed = directionPointer.transform.TransformDirection(directionAndSpeed);
-        characterHitBox.Move(directionAndSpeed * Time.deltaTime );
+        characterHitBox.Move(directionAndSpeed * Time.deltaTime * 5);
     }
 
 }
