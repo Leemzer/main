@@ -25,7 +25,7 @@ public class movement : MonoBehaviour
         
         Vector3 directionAndSpeed = new Vector3(moveInput.x, 0 , moveInput.y) * moveSpeed;
         directionAndSpeed = directionPointer.transform.TransformDirection(directionAndSpeed);
-        characterHitBox.Move(directionAndSpeed * Time.deltaTime * 5);
+        characterHitBox.Move(directionAndSpeed * Time.deltaTime * 2);
     }
 
 }
